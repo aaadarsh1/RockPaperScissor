@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(121, 121, 121);
+}
+.container{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    width: 95%;
+    height: 95%;
+}
+#scoreSection{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 15%;
+    width: 70%;
+    background-color: white;
+    border-radius: .3rem;
+}
+#myScore{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    color: white;
+    border-radius: .3rem;
+    padding: .5rem .8rem;
+    left: 5%;
+    font-size: 2rem;
+}
+#compScore{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    color: white;
+    border-radius: .3rem;
+    padding: 0.5rem 0.8rem;
+    right: 5%;
+    font-size: 2rem;
+}
+#rpsSection{
+    position: relative;
+    width: 90%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#rps{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+}
+.box{
+    position: relative;
+    width: 25%;
+    height: 65%;
+    background-color: springgreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .4rem;
+    font-size: 2rem;
+    font-weight: 500;
+    transition: .5s;
+    border: none;
+}
+.box:hover{
+    transform: scale(1.1);
+    opacity: .8;
+    cursor: pointer;
+}
+#winBoard{
+    height: 20%;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    font-weight: 700;
+}
+#imageSection{
+    position: relative;
+    height: 40%;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.image{
+    position: relative;
+    height: 60%;
+    width: 30%;
+}
+.rockImage{
+    background: url('rock.png') no-repeat center center;
+}
+.paperImage{
+    background: url('paper.png') no-repeat center center;
+}
+.scissorImage{
+    background: url('scissors.png') no-repeat center center;
+}
+#image1{
+    transform: scaleX(-1);
+}
+.moving{
+    position: relative;
+    animation-name: anim;
+    animation-duration: .5s;
+    animation-iteration-count: 5;
+}
+@keyframes anim {
+    0%{
+        top: -2rem;
+    }
+    50%{
+        top: 2rem;
+    }
+    100%{
+        top: -2rem;
+    }
+}
